@@ -1,5 +1,5 @@
 server:
-  port: 1607
+  port: 4444
 spring:
   datasource:
     password: Temp1234
