@@ -12,7 +12,7 @@ import com.zensar.repository.CouponRepository;
 
 @Service
 public class CouponServiceImpl implements CouponService {
-	
+
 	@Autowired
 	private CouponRepository couponRepository;
 
@@ -20,23 +20,20 @@ public class CouponServiceImpl implements CouponService {
 	public Coupon createCoupon(Coupon coupon) {
 		return couponRepository.save(coupon);
 	}
-	
-	
+
 	public Coupon getCoupon(String couponCode) {
 		return couponRepository.findByCouponCode(couponCode);
 	}
-
 
 	@Override
 	public List<Coupon> getAllCoupons() {
 		return couponRepository.findAll();
 	}
 
-
 	@Override
 	public void deleteCoupon(String couponCode) {
-		// TODO Auto-generated method stub
 		couponRepository.deleteByCouponCode(couponCode);
+
 	}
 
 }
