@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
+
 public class ProductServiceApplication {
 
 	public static void main(String[] args) {
@@ -21,7 +22,6 @@ public class ProductServiceApplication {
 	 * @Bean
 	 * 
 	 * @LoadBalanced public RestTemplate restTemplate() { return new RestTemplate();
-	 * 
 	 * }
 	 */
 }

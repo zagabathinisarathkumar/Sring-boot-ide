@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-
+@NoArgsConstructor
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,10 +21,11 @@ public class Product {
 	private Double price;
 	@Transient
 	private String couponCode;
+
 	public Product() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
+
 	public Product(int productId, String productName, String discription, Double price, String couponCode) {
 		super();
 		this.productId = productId;
@@ -33,43 +34,51 @@ public class Product {
 		this.price = price;
 		this.couponCode = couponCode;
 	}
+
 	public int getProductId() {
 		return productId;
 	}
+
 	public void setProductId(int productId) {
 		this.productId = productId;
 	}
+
 	public String getProductName() {
 		return productName;
 	}
+
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+
 	public String getDiscription() {
 		return discription;
 	}
+
 	public void setDiscription(String discription) {
 		this.discription = discription;
 	}
+
 	public Double getPrice() {
 		return price;
 	}
+
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+
 	public String getCouponCode() {
 		return couponCode;
 	}
+
 	public void setCouponCode(String couponCode) {
 		this.couponCode = couponCode;
 	}
+
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", productName=" + productName + ", discription=" + discription
 				+ ", price=" + price + ", couponCode=" + couponCode + "]";
 	}
-	
-	
-	
 
 }

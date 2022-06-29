@@ -8,10 +8,11 @@ import javax.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
-
+@NoArgsConstructor
 public class Coupon {
-
+	
 	private int couponId;
 	private String couponCode;
 	private Double discount;
@@ -19,7 +20,6 @@ public class Coupon {
 
 	public Coupon() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Coupon(int couponId, String couponCode, Double discount, String expDate) {
@@ -67,4 +67,5 @@ public class Coupon {
 		return "Coupon [couponId=" + couponId + ", couponCode=" + couponCode + ", discount=" + discount + ", expDate="
 				+ expDate + "]";
 	}
+
 }
